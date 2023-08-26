@@ -39,6 +39,7 @@ jobs:
           path: target/eb-java-ci-cd-0.0.1-SNAPSHOT.jar
     #Deploy's job
   deploy:
+    needs: build
     #Depends on build's job
     name: Deploy to Elastic Beanstalk
     #Will run steps on latest version of ubuntu
